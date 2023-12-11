@@ -10,14 +10,22 @@ import racingcar.domain.Winners;
 
 public class OutputView {
 
+    private static final String MOVE = "-";
+
     public void printResult(){
         System.out.println(RESULT_OUTPUT.getMessage());
     }
 
-    public void printCarMovement(Cars cars){
-        for (Car car : cars.getCarsInfo()) {
-            System.out.println(MOVEMENT_OUTPUT.getMovementOutput(car.getName(), car.getMovement()));
+    public void printCarMovement(String name, int moveCount){
+        System.out.println(MOVEMENT_OUTPUT.getMovementOutput(name, getMovement(moveCount)));
+    }
+
+    private String getMovement(int moveCount){
+        String move = "";
+        for (int i = 0; i < moveCount; i++) {
+            move = move+MOVE;
         }
+        return move;
     }
 
     public void printWinners(Winners winners){
