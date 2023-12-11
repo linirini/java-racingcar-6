@@ -40,11 +40,15 @@ public class GameManager {
             tryNumber--;
             outputView.printLineBreak();
             outputView.printResult();
-            for (Car car : cars.getCars()) {
-                car.move();
-                outputView.printCarMovement(car);
-                outputView.printLineBreak();
-            }
+            moveCars(cars);
+        }
+    }
+
+    private void moveCars(Cars cars) {
+        for (Car car : cars.getCars()) {
+            car.move();
+            outputView.printCarMovement(car);
+            outputView.printLineBreak();
         }
     }
 
