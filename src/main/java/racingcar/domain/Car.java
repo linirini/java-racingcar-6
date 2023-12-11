@@ -33,7 +33,7 @@ public class Car {
     }
 
     private boolean isMovingForward() {
-        return false;
+        return moveCount>=MININUM_MOVE_COUNT;
     }
 
     public String getName() {
