@@ -13,7 +13,8 @@
   - [x] 시도 횟수마다 줄바꿈 출력 - OutputView#printLineBreak
   - [x] 0에서 9 사이 무작위 값으로 설정 - RandomNumberGenerator#createRandomNumber
     - [x] Randoms.pickNumberInRange(int a, int b) 라이브러리 활용
-  - [ ] 전진 : 무작위 값이 4 이상인지 확인한다. - Cars#isMovingForward
+  - [ ] 전진 Car#move
+    - [ ] 무작위 값이 4 이상인지 확인한다. - Cars#isMovingForward
 - [ ] 우승자 판별 - Referee#determineWinners
   - [ ] 최종 우승자 저장 - Winners
   - [x] "최종 우승자 : 자동차명, 자동차명" 형식으로 우승자 출력 - OutputView#printWinner

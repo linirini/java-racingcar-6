@@ -30,6 +30,9 @@ public class Car {
 
     public void move() {
         this.moveCount = numberGenerator.createRandomNumber();
+        if(isMovingForward()){
+            forwardCount++;
+        }
     }
 
     private boolean isMovingForward() {
