@@ -2,7 +2,7 @@ package racingcar.domain;
 
 import static racingcar.utils.ExceptionEnum.DUPLICATED_NAMES;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,7 +12,7 @@ public class Cars {
 
     public Cars(List<String> carNames) {
         validate(carNames);
-        this.cars = initCarsForwardCount(cars);
+        this.cars = convertToCars(carNames);
     }
 
     private void validate(List<String> carNames) {
@@ -26,8 +26,12 @@ public class Cars {
         }
     }
 
-    private HashMap<Car, Integer> initCarsForwardCount(List<Car> cars) {
-        return null;
+    private List<Car> convertToCars(List<String> carNames) {
+        List<Car> cars = new ArrayList<>();
+        for (String name : carNames) {
+            cars.add(new Car(name));
+        }
+        return cars;
     }
 
 }
