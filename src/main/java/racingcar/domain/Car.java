@@ -4,6 +4,7 @@ import static racingcar.utils.ExceptionEnum.INVALID_NAME_LENGTH;
 
 public class Car {
 
+    private static final int MIN_LENGTH = 1;
     private static final int MAX_LENGTH = 5;
     private static final int MINIMUM_MOVE_COUNT = 4;
     private static final String MOVE = "-";
@@ -23,7 +24,7 @@ public class Car {
     }
 
     private void throwIfInvalidNameLength(String name) {
-        if (name.length() > MAX_LENGTH) {
+        if (name.length()<MIN_LENGTH||name.length() > MAX_LENGTH) {
             throw new IllegalArgumentException(INVALID_NAME_LENGTH.getMessage());
         }
     }

@@ -2,7 +2,7 @@
 
 - [x] 경주할 자동차 이름 입력
   - [x] "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)" 출력 - InputView#inputCars
-  - [x] 자동차 이름이 5자를 초과할 경우 - GameManager#validate
+  - [x] 자동차 이름이 1자 미만, 5자를 초과할 경우 - GameManager#validate
   - [x] 중복되는 자동차 이름이 존재하는 경우 - Cars#validate
 - [x] 몇 번 이동할 것인지 횟수 입력
     - [x] "시도할 횟수는 몇회인가요?" 출력 - InputView#inputTryNumber
