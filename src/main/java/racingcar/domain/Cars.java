@@ -22,7 +22,7 @@ public class Cars {
     private void throwIfDuplicatedName(List<String> carNames) {
         int uniqueNamesCount = carNames.stream().collect(Collectors.toSet()).size();
         if (carNames.size() != uniqueNamesCount) {
-            throw new IllegalArgumentException(DUPLICATED_NAMES.getMessage())
+            throw new IllegalArgumentException(DUPLICATED_NAMES.getMessage());
         }
     }
 

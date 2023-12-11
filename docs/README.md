@@ -7,7 +7,7 @@
 - [ ] 몇 번 이동할 것인지 횟수 입력
     - [x] "시도할 횟수는 몇회인가요?" 출력 - InputView#inputTryNumber
     - [ ] 숫자가 아닌 경우 - GameManager#validate
-- [ ] 자동차 전진 - Car#move
+- [x] 자동차 전진 - Car#move
   - [x] "실행 결과" 출력 - OutputView#printResult
   - [x] "자동차명 : --" 형식으로 자동차 전진 정보 출력 - OutputView#printCarMovement
   - [x] 시도 횟수마다 줄바꿈 출력 - OutputView#printLineBreak
@@ -18,3 +18,5 @@
   - [ ] 최종 우승자 저장 - Winners
   - [x] "최종 우승자 : 자동차명, 자동차명" 형식으로 우승자 출력 - OutputView#printWinner
   - [ ] 전진 횟수가 가장 많은 자동차 판별 - Cars#sortByForwardCount
+
+- random number generator singleton
