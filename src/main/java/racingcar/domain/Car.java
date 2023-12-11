@@ -26,7 +26,8 @@ public class Car {
     }
 
     public int move(){
-        return numberGenerator.createRandomNumber();
+        int moveCount = numberGenerator.createRandomNumber();
+        return moveCount;
     }
 
     public boolean isMovingForward(){
