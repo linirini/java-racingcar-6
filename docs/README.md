@@ -18,6 +18,6 @@
 - [ ] 우승자 판별 - Referee#determineWinners
   - [ ] 최종 우승자 저장 - Winners
   - [x] "최종 우승자 : 자동차명, 자동차명" 형식으로 우승자 출력 - OutputView#printWinner
-  - [ ] 전진 횟수가 가장 많은 자동차 판별 - Cars#findCarNamesWithMaxForwardCount()
+  - [x] 전진 횟수가 가장 많은 자동차 판별 - Cars#findCarNamesWithMaxForwardCount()
 
 - random number generator singleton

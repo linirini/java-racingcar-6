@@ -10,8 +10,8 @@ public class Winners {
         this.winners = winners;
     }
 
-    public List<String> getWinners() {
-        return winners;
+    public String getWinners() {
+        return String.format(", ", winners);
     }
 
 }

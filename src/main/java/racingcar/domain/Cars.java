@@ -34,7 +34,7 @@ public class Cars {
         return cars;
     }
 
-    private List<String> findCarNamesWithMaxForwardCount() {
+    public List<String> findCarNamesWithMaxForwardCount() {
         int maxCount = getMaxCount();
         List<String> carNames = new ArrayList<>();
         cars.stream().filter(car -> car.getForwardCount() == maxCount).collect(Collectors.toList())

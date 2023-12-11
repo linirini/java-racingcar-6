@@ -20,8 +20,8 @@ public enum OutputEnum {
         return carName + MOVEMENT_OUTPUT.message + movement;
     }
 
-    public String getWinnersOutput(List<String> winners){
-        return WINNERS_OUTPUT.message + String.format(", ",winners);
+    public String getWinnersOutput(String winners){
+        return WINNERS_OUTPUT.message + winners;
     }
 
 }
