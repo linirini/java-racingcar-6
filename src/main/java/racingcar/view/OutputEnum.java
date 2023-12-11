@@ -1,7 +1,5 @@
 package racingcar.view;
 
-import java.util.List;
-
 public enum OutputEnum {
     RESULT_OUTPUT("실행 결과"),
     MOVEMENT_OUTPUT(" : "),
@@ -16,11 +14,11 @@ public enum OutputEnum {
         return message;
     }
 
-    public String getMovementOutput(String carName, String movement){
+    public String getMovementOutput(String carName, String movement) {
         return carName + MOVEMENT_OUTPUT.message + movement;
     }
 
-    public String getWinnersOutput(String winners){
+    public String getWinnersOutput(String winners) {
         return WINNERS_OUTPUT.message + winners;
     }
 

@@ -30,20 +30,20 @@ public class Car {
 
     public void move() {
         this.moveCount = numberGenerator.createRandomNumber();
-        if(isMovingForward()){
+        if (isMovingForward()) {
             this.forwardCount++;
         }
     }
 
     private boolean isMovingForward() {
-        return moveCount>= MINIMUM_MOVE_COUNT;
+        return moveCount >= MINIMUM_MOVE_COUNT;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getForwardCount(){
+    public int getForwardCount() {
         return forwardCount;
     }
 
