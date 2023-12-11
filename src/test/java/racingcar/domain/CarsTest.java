@@ -2,6 +2,7 @@ package racingcar.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
@@ -16,6 +17,13 @@ public class CarsTest {
         assertThatNoException().isThrownBy(() -> new Cars(carNames));
         Cars cars = new Cars(carNames);
         assertThat(cars.getCars().get(0).getForwardCount()).isZero();
+    }
+
+    @DisplayName("자동차 이름이 중복되면 예외를 던진다.")
+    @Test
+    void 자동차_이름_중복_예외() {
+        List<String> carNames = List.of("가", "가", "다");
+        assertThatThrownBy(() -> new Cars(carNames)).isInstanceOf(IllegalArgumentException.class);
     }
 
 }
