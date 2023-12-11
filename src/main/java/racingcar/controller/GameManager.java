@@ -4,6 +4,7 @@ import static racingcar.utils.ExceptionEnum.NOT_NUMBER;
 
 import racingcar.domain.Car;
 import racingcar.domain.Cars;
+import racingcar.domain.RandomNumberGenerator;
 import racingcar.domain.Referee;
 import racingcar.domain.Winners;
 import racingcar.view.InputView;
@@ -14,6 +15,8 @@ public class GameManager {
     private final Referee referee = new Referee();
     private final OutputView outputView = new OutputView();
     private final InputView inputView = new InputView();
+    private final RandomNumberGenerator numberGenerator = RandomNumberGenerator.getInstance();
+
 
     public void run() {
         Cars cars = inputCars();
@@ -46,7 +49,7 @@ public class GameManager {
 
     private void moveCars(Cars cars) {
         for (Car car : cars.getCars()) {
-            car.move();
+            car.move(numberGenerator.createRandomNumber());
             outputView.printCarMovement(car);
             outputView.printLineBreak();
         }
