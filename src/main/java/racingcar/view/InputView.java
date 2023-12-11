@@ -9,14 +9,14 @@ import java.util.stream.Collectors;
 
 public class InputView {
 
-    public List<String> inputTryNumber(){
+    public String inputTryNumber() {
+        return null;
+    }
+
+    public List<String> inputCars() {
         System.out.println(CAR_NAMES_INPUT.getMessage());
         String input = readLine();
         return Arrays.stream(input.split(",")).collect(Collectors.toList());
-    }
-
-    public List<String> inputCars(){
-        return null;
     }
 
 }
