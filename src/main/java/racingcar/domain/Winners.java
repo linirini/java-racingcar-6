@@ -10,4 +10,8 @@ public class Winners {
         this.winners = winners;
     }
 
+    public List<String> getWinners() {
+        return winners;
+    }
+
 }

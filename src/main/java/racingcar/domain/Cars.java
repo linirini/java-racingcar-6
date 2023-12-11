@@ -2,6 +2,7 @@ package racingcar.domain;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cars {
 
@@ -16,8 +17,11 @@ public class Cars {
     }
 
     private HashMap<Car, Integer> initCarsForwardCount(List<Car> cars) {
-
+        return null;
     }
 
+    public List<Car> getCarsInfo(){
+        return cars.keySet().stream().collect(Collectors.toList());
+    }
 
 }
