@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -34,6 +35,13 @@ public class CarTest {
         Car car = new Car("자동차");
         car.move(moveCount);
         assertThat(car.getMovement()).isEqualTo(movement);
+    }
+
+    @DisplayName("자동차 이름이 5자 초과, 1자 미만이면 예외를 던진다.")
+    @ParameterizedTest
+    @ValueSource(strings = {"", "가나다라마바"})
+    void 자동차_이름_길이_예외(String carNames) {
+        assertThatThrownBy(() -> new Car(carNames)).isInstanceOf(IllegalArgumentException.class);
     }
 
 }
