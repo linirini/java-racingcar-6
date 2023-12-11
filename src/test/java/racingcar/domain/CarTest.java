@@ -8,7 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class CarTest {
+class CarTest {
 
     @DisplayName("숫자가 4 이상이면 전진한다.")
     @ParameterizedTest

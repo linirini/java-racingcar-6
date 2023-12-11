@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class CarsTest {
+class CarsTest {
 
     @DisplayName("자동차 이름을 받으면 자동차 목록을 생성한다.")
     @Test
