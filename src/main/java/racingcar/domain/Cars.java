@@ -34,6 +34,10 @@ public class Cars {
         return cars;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public List<String> findCarNamesWithMaxForwardCount() {
         int maxCount = getMaxCount();
         List<String> carNames = new ArrayList<>();
