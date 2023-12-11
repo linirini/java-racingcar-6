@@ -5,9 +5,11 @@ import static racingcar.utils.ExceptionEnum.INVALID_NAME_LENGTH;
 public class Car {
 
     private static final int MAX_LENGTH = 5;
+    private static final int MININUM_MOVE_COUNT = 4;
     private final RandomNumberGenerator numberGenerator = new RandomNumberGenerator();
     private final String name;
     private int forwardCount;
+    private int moveCount;
 
     public Car(String name) {
         validate(name);
@@ -25,12 +27,11 @@ public class Car {
         }
     }
 
-    public int move(){
-        int moveCount = numberGenerator.createRandomNumber();
-        return moveCount;
+    public void move(){
+        this.moveCount = numberGenerator.createRandomNumber();
     }
 
-    public boolean isMovingForward(){
+    private boolean isMovingForward(){
         return false;
     }
 
