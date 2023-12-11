@@ -11,7 +11,7 @@ public class Winners {
     }
 
     public String getWinners() {
-        return String.format(", ", winners);
+        return String.join(", ", winners);
     }
 
 }
