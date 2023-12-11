@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class CarTest {
@@ -24,6 +25,15 @@ public class CarTest {
         Car car = new Car("자동차");
         car.move(moveCount);
         assertThat(car.getForwardCount()).isEqualTo(0);
+    }
+
+    @DisplayName("자동차 실행 상태를 형식에 맞는 문자열 형태로 반환해준다.")
+    @ParameterizedTest
+    @CsvSource({"1,-", "3,---", "9,---------"})
+    void 자동차_상태(int moveCount, String movement) {
+        Car car = new Car("자동차");
+        car.move(moveCount);
+        assertThat(car.getMovement()).isEqualTo(movement);
     }
 
 }
