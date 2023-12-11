@@ -8,7 +8,7 @@ public class Car {
     private static final int MAX_LENGTH = 5;
     private static final int MINIMUM_MOVE_COUNT = 4;
     private static final String MOVE = "-";
-    private final RandomNumberGenerator numberGenerator = new RandomNumberGenerator();
+    private final RandomNumberGenerator numberGenerator = RandomNumberGenerator.getInstance();
     private final String name;
     private int forwardCount;
     private int moveCount;
