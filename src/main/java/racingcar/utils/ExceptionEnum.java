@@ -1,7 +1,8 @@
 package racingcar.utils;
 
 public enum ExceptionEnum {
-    INVALID_NAME_LENGTH("자동차 이름은 5자를 초과할 수 없습니다.");
+    INVALID_NAME_LENGTH("자동차 이름은 5자를 초과할 수 없습니다."),
+    DUPLICATED_NAMES("자동차 이름은 중복될 수 없습니다.");
     private static final String ERROR = "[ERROR] ";
     private String message;
 
