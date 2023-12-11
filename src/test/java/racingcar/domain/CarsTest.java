@@ -26,4 +26,18 @@ public class CarsTest {
         assertThatThrownBy(() -> new Cars(carNames)).isInstanceOf(IllegalArgumentException.class);
     }
 
+    @DisplayName("가장 전진 횟수가 많은 자동차들의 이름을 반환한다.")
+    @Test
+    void 전진_횟수_최다_자동차_목록() {
+        List<String> carNames = List.of("가", "나", "다");
+        Cars cars = new Cars(carNames);
+        cars.getCars().get(0).move(4);
+        cars.getCars().get(0).move(4);
+        cars.getCars().get(1).move(4);
+        cars.getCars().get(2).move(4);
+        cars.getCars().get(2).move(4);
+        List<String> maxForwardCarNames = cars.findCarNamesWithMaxForwardCount();
+        assertThat(maxForwardCarNames).hasSize(2).contains("가", "다");
+    }
+
 }
